@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <link rel="icon" href="/assets/imagens/logo_64x64.ico" type="logo_icon">
+    <title>Forusi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="/assets/imagens/logo-link.svg" alt="logo-link"
+                    class="logo-img"></a>
+            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mx-lg-2" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                SOBRE NÓS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" data-bs-auto-close="outside">
+                                <li><a class="dropdown-item" href="#">TRABALHE CONOSCO</a></li>
+                                <li><a class="dropdown-item" href="#">FAC</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mx-lg-2" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                PRODUTOS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" data-bs-auto-close="outside">
+                                <li><a href="" class="dropdown-item">Metais Sanitários</a></li>
+                                <li><a href="" class="dropdown-item">Chuveiros e Torneiras Elétricas</a></li>
+                                <li><a href="" class="dropdown-item">Pistolas para Pintura</a></li>
+                                <li><a href="" class="dropdown-item">Materiais Elétricos</a></li>
+                                <li><a href="" class="dropdown-item">Forros de PVC</a></li>
+                                <li><a href="" class="dropdown-item">Plugues e Conectores</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">INSTITUCIONAL</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">CONTATOS</a>
+                        </li>
+                    </ul>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="carousel">
+        <div id="carousel-exemplo" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div data-bs-interval="3000" class="carousel-item active">
+                    <img src="/assets/imagens/1.svg" class="d-block w-100" alt="">
+                </div>
+                <div data-bs-interval="3000" class="carousel-item">
+                    <img src="/assets/imagens/2.svg" class="d-block w-100" alt="">
+                </div>
+                <div data-bs-interval="3000" class="carousel-item">
+                    <img src="/assets/imagens/3.svg" class="d-block w-100" alt="">
+                </div>
+                <div data-bs-interval="3000" class="carousel-item">
+                    <img src="/assets/imagens/4.svg" class="d-block w-100" alt="">
+                </div>
+            </div>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="3"></button>
+            </div>
+        </div>
+    </section>
+    <section class="cards-segmento">
+        <div class="cards-container">
+            <a class="Meu-card" id="card-1" data-aos="fade-down" data-aos-duration="1000">
+                <img src="/assets/imagens/icons/metais.png" alt="Torneira Metálica">
+                <h3>Metais</h3>
+                <p>Sanitários</p>
+            </a>
+            <a class="Meu-card" id="card-2" data-aos="fade-down" data-aos-duration="1000">
+                <img src="/assets/imagens/icons/chuveiros.png" alt="Misturador Luxo">
+                <h3>Chuveiros e torneiras</h3>
+                <p>Elétricas</p>
+            </a>
+            <a class="Meu-card" id="card-3" data-aos="fade-down" data-aos-duration="1000">
+                <img src="/assets/imagens/icons/pistolas.png" alt="Válvula de Escoamento">
+                <h3>Pistolas</h3>
+                <p>Para Pintura</p>
+            </a>
+            <a class="Meu-card" id="card-4" data-aos="fade-down" data-aos-duration="2000">
+                <img src="/assets/imagens/icons/fios.png" alt="Bica Móvel">
+                <h3>Materiais</h3>
+                <p>Elétricas</p>
+            </a>
+            <a class="Meu-card" id="card-5" data-aos="fade-down" data-aos-duration="2000">
+                <img src="/assets/imagens/icons/forros.png" alt="Torneira Jardim">
+                <h3>Forros</h3>
+                <p>de PVC</p>
+            </a>
+            <a class="Meu-card" id="card-6" data-aos="fade-down" data-aos-duration="3000">
+                <img src="/assets/imagens/icons/plugue.png" alt="Registro de Pressão">
+                <h3>Plugue</h3>
+                <p>e conectores</p>
+            </a>
+        </div>
+    </section>
+    <section class="Sobre">
+        <div class="container">
+            <h2 class="titulo-sobre pt-5">Sobre a Forusi</h2>
+            <div class="Sobre-nos">
+                <p class="Conteudo" data-aos="zoom-out-down" data-aos-duration="1000">
+                    A <strong>Forusi</strong> é uma empresa brasileira, fundada em <span class="destaque">1975</span>,
+                    especializada na fabricação de produtos para o setor da construção civil.
+                    Com mais de <span class="destaque">50 anos</span> de atuação no mercado, a empresa possui um
+                    portfólio diversificado com mais de
+                    <span class="destaque">1.000 itens</span>, abrangendo segmentos como metais sanitários, chuveiros e
+                    torneiras elétricas,
+                    pistolas para pintura, materiais elétricos, forros de PVC, plugues e conectores.
+                    A missão da Forusi é oferecer produtos com <span class="destaque">qualidade</span> e <span
+                        class="destaque">inovação</span> para o setor da construção
+                    civil, promovendo a <span class="destaque">satisfação</span> dos clientes e contribuindo para o
+                    desenvolvimento sustentável.
+                </p>
+                <img src="/assets/imagens/Itaquera.jpg" alt="Itaquera" class="img-sobre" data-aos="fade-right"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine">
+            </div>
+        </div>
+    </section>
+    <section class="Cards">
+        <div class="container mt-5">
+            <div class="container d-flex justify-content-between flex-wrap gap-4">
+                <div class="card-sobre" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="informacaos-sobre">
+                        <img src="/assets/imagens/icons/icon-1.png" alt="Tradição">
+                        <h3>Tradição e Solidez</h3>
+                        <p>Bem-vindo ao nosso site, onde tradição e solidez se encontram para oferecer a você uma
+                            experiência única e confiável. Ao longo dos anos, construímos uma sólida reputação
+                            baseada
+                            em valores fundamentais, comprometimento com a excelência e a busca incessante pela
+                            satisfação de nossos clientes.</p>
+                    </div>
+                </div>
+                <div class="card-sobre" data-aos="fade-down" data-aos-duration="3000">
+                    <div class="informacaos-sobre">
+                        <img src="/assets/imagens/icons/icon-2.png" alt="100% brasileira">
+                        <h3>100% brasileira</h3>
+                        <p>Aqui, celebramos a riqueza de nossa cultura, a força de nosso povo e o espírito
+                            empreendedor
+                            que define a essência do Brasil. Somos mais do que uma empresa; somos uma expressão do
+                            dinamismo e da criatividade que caracterizam a nação brasileira.</p>
+                    </div>
+                </div>
+                <div class="card-sobre" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="informacaos-sobre">
+                        <img src="/assets/imagens/icons/icon-3.png" alt="Qualidade">
+                        <h3>Qualidade</h3>
+                        <p>A qualidade é mais do que um compromisso - é o alicerce sobre o qual construímos cada
+                            aspecto
+                            do que fazemos. Estamos dedicados a oferecer a você produtos e serviços que não apenas
+                            atendem, mas excedem as expectativas, elevando o padrão e redefinindo o significado de
+                            excelência.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="lancamentos">
+        <div class="container py-4 mt-5">
+            <h1 class="text-center display-4 fw-bold mb-4" data-aos="fade-right" data-aos-duration="1000"> Novidades que
+                vão transformar seu ambiente!</h1>
+            <p class="text-center mb-5">Conheça os últimos lançamentos com design moderno e máxima qualidade.</p>
+            <div class="row mb-4">
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="card">
+                        <img src="/assets/imagens/produtos/monocomando.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">MONOCOMANDO LAVATÓRIO BAIXA SQUARE BLACK MATTE</h5>
+                            <p class="card-text">Nossa torneira monocomando baixa é um excelente complemento para um
+                                banheiro moderno. Ela oferece praticidade e estilo, permitindo controlar facilmente
+                                o fluxo de água.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-duration="2000">
+                    <div class="card">
+                        <img src="/assets/imagens/produtos/monocomando.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">MONOCOMANDO LAVATÓRIO BAIXA SQUARE BLACK MATTE</h5>
+                            <p class="card-text">Nossa torneira monocomando baixa é um excelente complemento para um
+                                banheiro moderno. Ela oferece praticidade e estilo, permitindo controlar facilmente
+                                o fluxo de água.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-duration="3000">
+                    <div class="card">
+                        <img src="/assets/imagens/produtos/monocomando.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">MONOCOMANDO LAVATÓRIO BAIXA SQUARE BLACK MATTE</h5>
+                            <p class="card-text">Nossa torneira monocomando baixa é um excelente complemento para um
+                                banheiro moderno. Ela oferece praticidade e estilo, permitindo controlar facilmente
+                                o fluxo de água.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="card">
+                        <img src="/assets/imagens/produtos/monocomando.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">MONOCOMANDO LAVATÓRIO BAIXA SQUARE BLACK MATTE</h5>
+                            <p class="card-text">Nossa torneira monocomando baixa é um excelente complemento para um
+                                banheiro moderno. Ela oferece praticidade e estilo, permitindo controlar facilmente
+                                o fluxo de água.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-duration="2000">
+                    <div class="card">
+                        <img src="/assets/imagens/produtos/monocomando.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">MONOCOMANDO LAVATÓRIO BAIXA SQUARE BLACK MATTE</h5>
+                            <p class="card-text">Nossa torneira monocomando baixa é um excelente complemento para um
+                                banheiro moderno. Ela oferece praticidade e estilo, permitindo controlar facilmente
+                                o fluxo de água.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-duration="3000">
+                    <div class="card">
+                        <img src="/assets/imagens/produtos/monocomando.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">MONOCOMANDO LAVATÓRIO BAIXA SQUARE BLACK MATTE</h5>
+                            <p class="card-text">Nossa torneira monocomando baixa é um excelente complemento para um
+                                banheiro moderno. Ela oferece praticidade e estilo, permitindo controlar facilmente
+                                o fluxo de água.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button type="button" class="btn btn-outline-primary">Ver mais+</button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-header">
+        <div class="container">
+            <div class="top">
+                <div class="logo-details">
+                    <img src="/assets/imagens/logo-link.svg" class="logo-footer" alt="">
+                </div>
+                <div class="footer-span">
+                    <span>Forusi há 50 anos nos lares e comércios brasileiros, em 6 segmentos da construção civil
+                        com + de 1000 produtos!!!</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="link-boxes">
+                    <ul class="box">
+                        <li class="link_name">Produtos</li>
+                        <li><a href="">Metais Sanitários</a></li>
+                        <li><a href="">Chuveiros e Torneiras Elétricas</a></li>
+                        <li><a href="">Pistolas para Pintura</a></li>
+                        <li><a href="">Materiais Elétricos</a></li>
+                        <li><a href="">Forros de PVC</a></li>
+                        <li><a href="">Plugues e Conectores</a></li>
+                    </ul>
+                    <ul class="box">
+                        <li class="link_name">Fale com a Área Comercial</li>
+                        <li><a href="">De Metais Sanitários</a></li>
+                        <li><a href="">De Chuveiros e Torneiras Elétricas</a></li>
+                        <li><a href="">De Pistolas para Pintura</a></li>
+                        <li><a href="">De Materiais Elétricos</a></li>
+                        <li><a href="">De Forros de PVC</a></li>
+                        <li><a href="">De Plugues e Conectores</a></li>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li class="link_name">Onde fica a Forusi</li>
+                        <li><a href="">Itaquera</a></li>
+                        <li><a href="">Mogi-mirim</a></li>
+                        <li><a href="">Iperó </a></li>
+                    </ul>
+                    <ul class="box">
+                        <li class="link_name">Contatos</li>
+                        <li><a href="">(11) 2523-9600</a></li>
+                        <li><i class="bi bi-instagram"></i><a
+                                href="https://www.instagram.com/forusioficial/">@forusioficial</a></li>
+                        <li><i class="bi bi-linkedin"></i><a href="https://br.linkedin.com/company/forusi">linkedin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-details">
+            <div class="bottom_text">
+                <span class="copyright_text">Copyright © 2025 All rights reserved</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="/assets/js/script.js"></script>
+
+</html>
