@@ -1,9 +1,9 @@
-*{
+* {
     font-family: "Inter", sans-serif;
 }
 
 .navbar {
-    background-color:#09809e;
+    background-color: #09809e;
     height: 100px;
     margin: 15px;
     border-radius: 10px;
@@ -23,12 +23,12 @@
 }
 
 .nav-link,
-    .nav-link:focus,
-    .nav-link:active,
-    .nav-link.show,
-    .nav-link.dropdown-toggle.show {
-      color: #ffffff !important;
-    }
+.nav-link:focus,
+.nav-link:active,
+.nav-link.show,
+.nav-link.dropdown-toggle.show {
+    color: #ffffff !important;
+}
 
 .navbar-toggler {
     border: none;
@@ -41,7 +41,7 @@
     outline: none;
 }
 
-.nav-link{
+.nav-link {
     color: #ffffff;
     position: relative;
 }
@@ -60,7 +60,7 @@
     float: none;
 }
 
-.icons a{
+.icons a {
     color: #ffffff;
     font-size: 1.6rem;
     margin-right: 20px;
@@ -79,19 +79,19 @@
         width: 55%;
     }
 
-    .nav-link{
+    .nav-link {
         color: #163758e1 !important;
         font-weight: 500;
         position: relative;
     }
 
     .nav-link,
-    .icons a ,
+    .icons a,
     .nav-link:focus,
     .nav-link:active,
     .nav-link.show,
     .nav-link.dropdown-toggle.show {
-      color: #163758e1 !important;
+        color: #163758e1 !important;
     }
 }
 
@@ -203,7 +203,7 @@
     width: 230px;
     padding: 46px 20px;
     border-radius: 20px;
-    background-color: #ffffff; 
+    background-color: #ffffff;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     text-align: center;
     text-decoration: none;
@@ -266,6 +266,15 @@
 
 
 @media (max-width: 768px) {
+    .navbar {
+        max-width: 415px;
+        background-color: #09809e;
+        height: 100px;
+        margin: 15px;
+        border-radius: 10px;
+        padding: 0.5rem;
+    }
+
     .cards-container {
         flex-direction: column;
         align-items: center;
@@ -279,37 +288,37 @@
         text-decoration: none;
         cursor: pointer;
     }
-    
+
     #card-1 {
         background-color: #163758;
     }
-    
+
     #card-2 {
         background-color: #09809e;
     }
-    
+
     #card-3 {
         background-color: #00b1cd;
     }
-    
+
     #card-4 {
         background-color: #4cc8dc;
     }
-    
+
     #card-5 {
         background-color: #7fd8e6;
     }
-    
+
     #card-6 {
         background-color: #0db1db;
     }
-    
-    
+
+
     .cards-segmento {
         background: linear-gradient(189deg, #163758, #0db1db);
         padding: 20px 20px;
     }
-    
+
     .cards-segmento h2 {
         text-align: center;
         color: #fff;
@@ -317,13 +326,13 @@
         font-weight: bold;
         margin-bottom: 40px;
     }
-    
+
     .cards-container {
         display: flex;
         justify-content: center;
         gap: 30px;
     }
-    
+
     .Meu-card {
         width: 220px;
         padding: 30px 20px;
@@ -336,7 +345,7 @@
         position: relative;
         overflow: hidden;
     }
-    
+
     .Meu-card::before {
         content: "";
         position: absolute;
@@ -348,16 +357,16 @@
         transition: top 0.3s ease-in-out;
         z-index: 0;
     }
-    
+
     .Meu-card:hover::before {
         top: 0;
     }
-    
+
     .Meu-card:hover {
         transform: translateY(-10px);
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
     }
-    
+
     .Meu-card img {
         width: 70px;
         margin-bottom: 15px;
@@ -365,11 +374,11 @@
         z-index: 1;
         transition: transform 0.3s ease;
     }
-    
+
     .Meu-card:hover img {
         transform: scale(1.1);
     }
-    
+
     .Meu-card h3,
     .Meu-card p {
         margin: 0;
@@ -377,13 +386,13 @@
         position: relative;
         z-index: 1;
     }
-    
+
     .Meu-card h3 {
         font-size: 18px;
         font-weight: bold;
         margin-bottom: 5px;
     }
-    
+
     .Meu-card p {
         font-size: 14px;
         opacity: 0.7;
@@ -394,7 +403,8 @@
     }
 
     .carousel .carousel-item {
-        height: 600px; /* ou o valor que desejar */
+        height: 600px;
+        /* ou o valor que desejar */
     }
 
     .carousel .carousel-item img {
@@ -499,7 +509,7 @@
     background-color: #09809e5e;
 }
 
-.card-body{
+.card-body {
     background-color: #09809e;
 }
 
@@ -730,11 +740,11 @@ footer .bottom-details .bottom_text {
 }
 
 @media (max-width: 768px) {
-    .Cards{
+    .Cards {
         height: 225vh;
     }
 
-    .card-sobre{
+    .card-sobre {
         display: flex;
     }
 }
@@ -754,8 +764,8 @@ footer .bottom-details .bottom_text {
     }
 
     .card-sobre::before {
-    height: 435px;
-}
+        height: 435px;
+    }
 }
 
 @media (max-width: 480px) {
