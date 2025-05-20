@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!container) return;
     const botao = document.getElementById('btn-ver-mais');
     if (botao) {
-  botao.addEventListener('click', mostrarMaisProdutos);
-}
+        botao.addEventListener('click', mostrarMaisProdutos);
+    }
 
     let pagina = 0;
     const porPagina = 6;
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.setAttribute('data-aos', 'zoom-in');
             card.setAttribute('data-aos-duration', '1000');
             card.innerHTML = `
-                <a href="pages/descricao.html?id=${produto.id}" class="text-decoration-none text-dark">
+                <a href="/pages/Descricao.html?id=${produto.id}" class="text-decoration-none text-dark">
                     <div class="card h-100">
                         <img src="${produto.imagem}" class="card-img-top" alt="${produto.nome}">
                         <div class="card-body">
@@ -95,7 +95,7 @@ if (id) {
                         <img src="${produto.imagem}" class="img-fluid" alt="${produto.nome}">
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 mt-4">
                     <h2>${produto.nome}</h2>
                     <p><strong>Código:</strong> ${produto.id}</p>
                     <p>${produto.descricao || "Sem descrição disponível."}</p>
@@ -127,7 +127,7 @@ function mostrarProdutos(lista) {
         card.className = 'col-md-4 mb-4';
         card.innerHTML = `
             <div class="card h-100 text-center">
-                <a href="Descricao.html?id=${produto.id}" class="text-decoration-none text-dark">
+                <a href="/pages/Descricao.html?id=${produto.id}" class="text-decoration-none text-dark">
                     <img src="${produto.imagem}" class="card-img-top p-3" alt="${produto.nome}">
                     <div class="card-body">
                         <h6 class="card-title">${produto.nome}</h6>
@@ -151,8 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
     carregarProdutos().then(() => {
         if (categoriaParam) {
             filtrarPorCategoria(categoriaParam);
-        } else {
-            // mostrarProdutos(todosProdutos); // opcional: mostrar todos se não houver filtro
         }
     });
 
