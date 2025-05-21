@@ -7,7 +7,7 @@ a {
 }
 
 .navbar {
-    background-color: #09809e;
+    background-color: #05a4cb;
     height: 100px;
     margin: 15px;
     border-radius: 10px;
@@ -24,14 +24,6 @@ a {
     color: #ffffff;
     font-size: 24px;
     transition: 0.3s color;
-}
-
-.nav-link,
-.nav-link:focus,
-.nav-link:active,
-.nav-link.show,
-.nav-link.dropdown-toggle.show {
-    color: #ffffff !important;
 }
 
 .navbar-toggler {
@@ -51,7 +43,7 @@ a {
 }
 
 .dropdown-item:hover {
-    background-color: #0db1db !important;
+    background-color: #212243 !important;
     color: #fff !important;
 }
 
@@ -77,13 +69,166 @@ a {
     object-fit: cover;
 }
 
+.formulario {
+    margin-top: 140px;
+}
+
+.formulario form {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.formulario img {
+    width: 100%;
+    height: auto;
+}
+
+.formulario label {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.formulario input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.formulario textarea {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    resize: none;
+}
+
+.formulario button {
+    background-color: #163758;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario-content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #09809e;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    width: 60%;
+}
+
+.formulario-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #163758;
+    border-radius: 10px;
+    font-size: 28px;
+}
+
+.formulario hr {
+    border: 2px solid #646464;
+    width: 100px;
+}
+
+.formulario--container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.banner{
+    max-width: 75%;
+    margin: 0 auto;
+    margin-top: 8%;
+}
+
+.Container-produtos aside {
+    background-color: #212243;
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.Container-produtos a {
+    color: #fff;
+}
+
+.Container-produtos hr {
+    border: 2px solid #09809e;
+}
+
+.Container-produtos a:hover {
+    color: #09809e;
+}
+
+.fabricas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px; 
+    padding: 10px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.fabricas img {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    object-fit: cover;
+}
+
+.text h2, h1{
+    color: #212243;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.content--text{
+    margin-top: 170px;
+}
+
+.text {
+    background-color: #05a4cb;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.bloco-com-fundo {
+    background-image: url('/assets/imagens/fabricas/bg-ins.jpg');
+    background-size: cover;       /* cobre todo o fundo */
+    background-position: center;  /* centraliza a imagem */
+    background-repeat: no-repeat; /* evita repetição */
+    padding: 40px;
+    color: white;                 /* para texto ficar visível em fundo escuro */
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.offcanvas {
+    background-color: #ffff;
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid #212243;
+}
+
 @media (max-width: 991px) {
     .logo-img {
         width: 55%;
     }
 
     .nav-link {
-        color: #163758e1 !important;
+        color: #212243 !important;
         font-weight: 500;
         position: relative;
     }
@@ -94,7 +239,7 @@ a {
     .nav-link:active,
     .nav-link.show,
     .nav-link.dropdown-toggle.show {
-        color: #163758e1 !important;
+        color: #212243 !important;
     }
 }
 
@@ -107,7 +252,7 @@ a {
         transform: translateX(-50%);
         width: 0;
         height: 2px;
-        background-color: #163758e1;
+        background-color: #212243;
         visibility: hidden;
         transition: 0.3s ease-in-out;
     }
@@ -268,10 +413,17 @@ a {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
+    .text{
+        margin-bottom: 50px;
+    }
+
+    .bloco-com-fundo{
+        padding: 1px;
+    }
     .navbar {
         max-width: 415px;
-        background-color: #09809e;
+        background-color: #05a4cb;
         height: 100px;
         margin: 15px;
         border-radius: 10px;
@@ -416,8 +568,20 @@ a {
     }
 }
 
+@media (max-width: 768px) {
+  .banner {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
 .Sobre {
-    background-color: #163758e1;
+    background-color: #212243;
 }
 
 .Sobre-nos {
@@ -498,12 +662,12 @@ a {
 
 
 .btn-outline-primary {
-    color: #09809e !important;
-    border-color: #09809e !important;
+    color: #05a4cb !important;
+    border-color: #05a4cb !important;
 }
 
 .btn-outline-primary:hover {
-    background-color: #09809e !important;
+    background-color: #05a4cb !important;
     color: #fff !important;
 }
 
@@ -513,7 +677,7 @@ a {
 }
 
 .card-body {
-    background-color: #09809e;
+    background-color: #212243;
     height: 90px;
     display: flex;
     flex-direction: column;
@@ -522,7 +686,8 @@ a {
 }
 
 .Container-produtos {
-    margin-top: 117px;
+    margin-top: 20px;
+    margin-bottom: 90px;
 }
 
 .card-title {
@@ -571,16 +736,13 @@ a {
     height: 400px;
     border-radius: 12px;
     object-fit: cover;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
 .card {
     cursor: pointer;
-    border: none;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #fff;
 }
@@ -594,13 +756,12 @@ a {
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 30px rgba(5, 0, 0, 0.20);
 }
 
 .card-img-top {
     object-fit: contain;
     height: 180px;
-    /* ou ajuste conforme sua preferência */
     padding: 10px;
 }
 
@@ -629,12 +790,12 @@ a {
 }
 
 .footer-header {
-    background-color: #163758;
+    background-color: #212243;
 
 }
 
 footer {
-    background: #09809e;
+    background: #05a4cb;
     width: 100%;
     position: relative;
 }
@@ -650,7 +811,6 @@ footer .content {
 
 footer .content .top {
     margin-bottom: 25px;
-    background-color: #0a84ff;
 }
 
 .footer-span {
@@ -730,13 +890,13 @@ i {
 
 .content .link-boxes .box li a:hover {
     opacity: 1;
-    color: #163758e1;
-    border-bottom: 2px solid #163758e1;
+    color: #212243;
+    border-bottom: 2px solid #212243;
 }
 
 footer .bottom-details {
     width: 100%;
-    background: #163758;
+    background: #212243;
 }
 
 footer .bottom-details .bottom_text {

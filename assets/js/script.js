@@ -17,60 +17,58 @@ document.addEventListener("DOMContentLoaded", () => {
 // Página inicial: exibição de produtos com botão "ver mais"
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.lancamentos .row.mb-4');
-    if (!container) return;
     const botao = document.getElementById('btn-ver-mais');
-    if (botao) {
-        botao.addEventListener('click', mostrarMaisProdutos);
-    }
-
     let pagina = 0;
     const porPagina = 6;
     let produtos = [];
 
-    fetch('https://forusi-api.vercel.app/api/produtos')
-        .then(res => res.json())
-        .then(data => {
-            produtos = data;
-            mostrarMaisProdutos();
-        })
-        .catch(err => {
-            console.error('Erro ao carregar produtos:', err);
-        });
+    if (container && botao) {
+        fetch('https://forusi-api.vercel.app/api/produtos')
+            .then(res => res.json())
+            .then(data => {
+                produtos = data;
+                mostrarMaisProdutos();
+            })
+            .catch(err => {
+                console.error('Erro ao carregar produtos:', err);
+            });
 
-    function mostrarMaisProdutos() {
-        const inicio = pagina * porPagina;
-        const fim = inicio + porPagina;
-        const produtosPagina = produtos.slice(inicio, fim);
+        function mostrarMaisProdutos() {
+            const inicio = pagina * porPagina;
+            const fim = inicio + porPagina;
+            const produtosPagina = produtos.slice(inicio, fim);
 
-        if (produtosPagina.length === 0) return;
-
-        produtosPagina.forEach(produto => {
-            const card = document.createElement('div');
-            card.className = 'col-md-4 mb-4';
-            card.setAttribute('data-aos', 'zoom-in');
-            card.setAttribute('data-aos-duration', '1000');
-            card.innerHTML = `
-                <a href="/pages/Descricao.html?id=${produto.id}" class="text-decoration-none text-dark">
-                    <div class="card h-100">
-                        <img src="${produto.imagem}" class="card-img-top" alt="${produto.nome}">
-                        <div class="card-body">
-                            <h5 class="card-title">${produto.nome}</h5>
+            produtosPagina.forEach(produto => {
+                const card = document.createElement('div');
+                card.className = 'col-md-4 mb-4';
+                card.setAttribute('data-aos', 'zoom-in');
+                card.setAttribute('data-aos-duration', '1000');
+                card.innerHTML = `
+                    <a href="/pages/Descricao.html?id=${produto.id}" class="text-decoration-none text-dark">
+                        <div class="card h-100">
+                            <img src="${produto.imagem}" class="card-img-top" alt="${produto.nome}">
+                            <div class="card-body">
+                                <h5 class="card-title">${produto.nome}</h5>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            `;
-            container.appendChild(card);
-        });
+                    </a>
+                `;
+                container.appendChild(card);
+            });
 
-        AOS.refresh();
-        pagina++;
+            AOS.refresh();
+            pagina++;
 
-        if (pagina * porPagina >= produtos.length) {
-            botao.style.display = 'none';
+            if (pagina === 2) {
+                botao.innerText = "Ver mais+";
+                botao.className = "btn btn-outline-primary"; // mantém estilo original
+            } else if (pagina > 2) {
+                window.location.href = "/pages/Produtos.html?categoria=Metais%20Sanit%C3%A1rios";
+            }
         }
-    }
 
-    botao.addEventListener('click', mostrarMaisProdutos);
+        botao.addEventListener('click', mostrarMaisProdutos);
+    }
 });
 
 // Página descricao.html: detalhes do produto
@@ -111,16 +109,19 @@ if (id) {
 
 // Página produtos.html: carregar e filtrar por categoria dinamicamente
 let todosProdutos = [];
+let paginaProdutos = 0;
+const porPaginaProdutos = 6;
+let categoriaSelecionada = null;
 
 async function carregarProdutos() {
     const res = await fetch("https://forusi-api.vercel.app/api/produtos");
     todosProdutos = await res.json();
 }
 
-function mostrarProdutos(lista) {
+function mostrarProdutos(lista, append = false) {
     const container = document.getElementById('produtos-lista');
     if (!container) return;
-    container.innerHTML = '';
+    if (!append) container.innerHTML = '';
 
     lista.forEach(produto => {
         const card = document.createElement('div');
@@ -139,9 +140,62 @@ function mostrarProdutos(lista) {
     });
 }
 
+function mostrarMaisProdutosPorCategoria(lista) {
+    const inicio = paginaProdutos * porPaginaProdutos;
+    const fim = inicio + porPaginaProdutos;
+    const produtosPagina = lista.slice(inicio, fim);
+    mostrarProdutos(produtosPagina, true);
+    paginaProdutos++;
+    if (paginaProdutos * porPaginaProdutos >= lista.length) {
+        document.getElementById('btn-ver-mais').style.display = 'none';
+    }
+}
+
 function filtrarPorCategoria(categoria) {
+    categoriaSelecionada = categoria;
     const filtrados = todosProdutos.filter(p => p.categoria === categoria);
-    mostrarProdutos(filtrados);
+    paginaProdutos = 0;
+    document.getElementById('btn-ver-mais').style.display = 'block';
+    document.getElementById('produtos-lista').innerHTML = '';
+    mostrarMaisProdutosPorCategoria(filtrados);
+    atualizarBanner(categoria);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+const bannersPorCategoria = {
+    "Metais Sanitários": {
+        desktop: "/assets/imagens/banner/Banner_metais.jpg",
+        mobile: "/assets/imagens/mobile/metais.png"
+    },
+    "Chuveiros e Torneiras Elétricas": {
+        desktop: "/assets/imagens/banner/Banner_duchas.jpg",
+        mobile: "/assets/imagens/mobile/2.svg"
+    },
+    "Pistolas para Pintura": {
+        desktop: "/assets/imagens/banner/Banner_pistolas.jpg",
+        mobile: "/assets/imagens/mobile/pistolas.png"
+    },
+    "Materiais Elétricos": {
+        desktop: "/assets/imagens/banner/Banner_plugues.jpg",
+        mobile: "/assets/imagens/mobile/plugues.png"
+    },
+    "Forros de PVC": {
+        desktop: "/assets/imagens/banner/Banner_forros_pvc.jpg",
+        mobile: "/assets/imagens/mobile/forros.png"
+    },
+    "Plugues e Conectores": {
+        desktop: "/assets/imagens/banner/Banner_plugues.jpg",
+        mobile: "/assets/imagens/mobile/plugues.png"
+    }
+};
+
+function atualizarBanner(categoria) {
+    const bannerImg = document.getElementById("banner-segmento-img");
+    const bannerData = bannersPorCategoria[categoria];
+    if (bannerImg && bannerData) {
+        const isMobile = window.innerWidth <= 768;
+        bannerImg.src = isMobile ? bannerData.mobile : bannerData.desktop;
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -155,10 +209,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelectorAll('.filtro-categoria').forEach(link => {
-        link.addEventListener('click', e => {
+        link.addEventListener('click', async e => {
             e.preventDefault();
             const categoria = e.target.dataset.categoria;
+            if (todosProdutos.length === 0) {
+                await carregarProdutos();
+            }
             filtrarPorCategoria(categoria);
         });
     });
+
+    const btnMais = document.getElementById("btn-ver-mais");
+    if (btnMais) {
+        btnMais.addEventListener("click", () => {
+            if (categoriaSelecionada) {
+                const filtrados = todosProdutos.filter(p => p.categoria === categoriaSelecionada);
+                mostrarMaisProdutosPorCategoria(filtrados);
+            } else {
+                const inicio = paginaProdutos * porPaginaProdutos;
+                const fim = inicio + porPaginaProdutos;
+                const proximaPagina = todosProdutos.slice(inicio, fim);
+                mostrarProdutos(proximaPagina, true);
+                paginaProdutos++;
+                if (paginaProdutos * porPaginaProdutos >= todosProdutos.length) {
+                    btnMais.style.display = 'none';
+                }
+            }
+        });
+    }
+    window.addEventListener("resize", () => {
+    if (categoriaSelecionada) {
+        atualizarBanner(categoriaSelecionada);
+    }
+});
 });
