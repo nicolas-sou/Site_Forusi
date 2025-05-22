@@ -26,11 +26,7 @@ a {
     transition: 0.3s color;
 }
 
-.offcanvas-body{
-    background-image: linear-gradient(280deg, #212243, #05a4cb);
-}
-
-.offcanvas-header{
+.offcanvas-header {
     background-color: #ffffff;
 }
 
@@ -157,7 +153,7 @@ a {
 }
 
 .Container-produtos aside {
-    background-color: #212243;
+    background-color: #05a4cb;
     color: #fff;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -214,14 +210,10 @@ a {
 .bloco-com-fundo {
     background-image: url('/assets/imagens/fabricas/bg-ins.jpg');
     background-size: cover;
-    /* cobre todo o fundo */
     background-position: center;
-    /* centraliza a imagem */
     background-repeat: no-repeat;
-    /* evita repetição */
     padding: 40px;
     color: white;
-    /* para texto ficar visível em fundo escuro */
     font-size: 1.2rem;
     position: relative;
     z-index: 1;
@@ -820,6 +812,15 @@ a {
     .carousel .carousel-item img {
         height: 100%;
         object-fit: cover;
+    }
+
+    .Container-produtos aside {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .offcanvas-body {
+        background-image: linear-gradient(280deg, #212243, #05a4cb);
     }
 }
 
