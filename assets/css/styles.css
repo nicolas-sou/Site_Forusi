@@ -190,7 +190,7 @@ a {
 
 .text h2,
 .title-text {
-    color: #212243;
+    color: #fff;
     font-size: 2.2rem;
     font-weight: bold;
     text-align: center;
@@ -200,8 +200,15 @@ a {
     margin-top: 170px;
 }
 
+.content--text h2 {
+    color: #212243;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
 .text {
-    background-color: #05a4cb;
+    background-color: #09809e;
     color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -853,6 +860,10 @@ a {
     }
 
     .fabricas img {
+        padding: 10px;
+    }
+
+    .formulario--header{
         padding: 10px;
     }
 }
