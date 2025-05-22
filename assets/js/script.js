@@ -180,11 +180,11 @@ const bannersPorCategoria = {
         mobile: "/assets/imagens/mobile/plugues.svg"
     },
     "Forros de PVC": {
-        desktop: "/assets/imagens/banner/Banner_forros_pvc.svg",
+        desktop: "/assets/imagens/banner/Banner_forros.svg",
         mobile: "/assets/imagens/mobile/forros.svg"
     },
     "Plugues e Conectores": {
-        desktop: "/assets/imagens/banner/Banner_plugues.jpg",
+        desktop: "/assets/imagens/banner/Banner_plugues.svg",
         mobile: "/assets/imagens/mobile/plugues.svg"
     }
 };
