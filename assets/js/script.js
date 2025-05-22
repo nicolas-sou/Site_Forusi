@@ -164,23 +164,23 @@ function filtrarPorCategoria(categoria) {
 
 const bannersPorCategoria = {
     "Metais Sanitários": {
-        desktop: "/assets/imagens/banner/Banner_metais.jpg",
+        desktop: "/assets/imagens/banner/Banner_metais.svg",
         mobile: "/assets/imagens/mobile/metais.svg"
     },
     "Chuveiros e Torneiras Elétricas": {
-        desktop: "/assets/imagens/banner/Banner_duchas.jpg",
+        desktop: "/assets/imagens/banner/Banner_duchas.svg",
         mobile: "/assets/imagens/mobile/2.svg"
     },
     "Pistolas para Pintura": {
-        desktop: "/assets/imagens/banner/Banner_pistolas.jpg",
+        desktop: "/assets/imagens/banner/Banner_pistolas.svg",
         mobile: "/assets/imagens/mobile/pistolas.svg"
     },
     "Materiais Elétricos": {
-        desktop: "/assets/imagens/banner/Banner_plugues.jpg",
+        desktop: "/assets/imagens/banner/Banner_plugues.svg",
         mobile: "/assets/imagens/mobile/plugues.svg"
     },
     "Forros de PVC": {
-        desktop: "/assets/imagens/banner/Banner_forros_pvc.jpg",
+        desktop: "/assets/imagens/banner/Banner_forros_pvc.svg",
         mobile: "/assets/imagens/mobile/forros.svg"
     },
     "Plugues e Conectores": {
