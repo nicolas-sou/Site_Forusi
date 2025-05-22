@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detalhes do Produto</title>
-
-    <!-- Bootstrap e estilos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/imagens/logo_64x64.ico" type="logo_icon">
+    <title>Forusi</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html"><img src="/assets/imagens/logo-link.svg" alt="logo-link"
+            <a class="navbar-brand" href="#"><img src="/assets/imagens/logo-link.svg" alt="logo-link"
                     class="logo-img"></a>
             <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -50,13 +49,19 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 PRODUTOS
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" data-bs-auto-close="outside">
-                                <li><a href="" class="dropdown-item">Metais Sanitários</a></li>
-                                <li><a href="" class="dropdown-item">Chuveiros e Torneiras Elétricas</a></li>
-                                <li><a href="" class="dropdown-item">Pistolas para Pintura</a></li>
-                                <li><a href="" class="dropdown-item">Materiais Elétricos</a></li>
-                                <li><a href="" class="dropdown-item">Forros de PVC</a></li>
-                                <li><a href="" class="dropdown-item">Plugues e Conectores</a></li>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="/pages/Produtos.html?categoria=Metais Sanitários"
+                                        class="dropdown-item">Metais Sanitários</a></li>
+                                <li><a href="/pages/Produtos.html?categoria=Chuveiros e Torneiras Elétricas"
+                                        class="dropdown-item">Chuveiros e Torneiras Elétricas</a></li>
+                                <li><a href="/pages/Produtos.html?categoria=Pistolas para Pintura"
+                                        class="dropdown-item">Pistolas para Pintura</a></li>
+                                <li><a href="/pages/Produtos.html?categoria=Materiais Elétricos"
+                                        class="dropdown-item">Materiais Elétricos</a></li>
+                                <li><a href="/pages/Produtos.html?categoria=Forros de PVC" class="dropdown-item">Forros
+                                        de PVC</a></li>
+                                <li><a href="/pages/Produtos.html?categoria=Plugues e Conectores"
+                                        class="dropdown-item">Plugues e Conectores</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -66,18 +71,70 @@
                             <a class="nav-link mx-lg-2" href="/pages/Contato.html">CONTATOS</a>
                         </li>
                     </ul>
-                    <div class="icons">
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="container produto">
-        <a href="javascript:history.back()" class="btn btn-outline-primary mb-4">Voltar</a>
-        <div id="detalhes-produto" class="row"></div>
+    <section class="cads-categorias">
+        <h1 class="mb-5" data-aos="fade-right" data-aos-duration="2000">Fale com Representates</h1>
+        <div class="cards-container">
+            <a href="" class="Meu-card" id="card-1" data-aos="fade-down" data-aos-duration="1000">
+                <img src="/assets/imagens/icons/metais.png" alt="Torneira Metálica">
+                <h3>Metais</h3>
+                <p>Sanitários</p>
+            </a>
+            <a href="" class="Meu-card" id="card-2" data-aos="fade-down" data-aos-duration="1000">
+                <img src="/assets/imagens/icons/chuveiros.png" alt="Misturador Luxo">
+                <h3>Chuveiros e torneiras</h3>
+                <p>Elétricas</p>
+            </a>
+            <a class="Meu-card" id="card-3" data-aos="fade-down" data-aos-duration="1000">
+                <img src="/assets/imagens/icons/pistolas.png" alt="Válvula de Escoamento">
+                <h3>Pistolas</h3>
+                <p>Para Pintura</p>
+            </a>
+            <a href="" class="Meu-card" id="card-4" data-aos="fade-down" data-aos-duration="2000">
+                <img src="/assets/imagens/icons/fios.png" alt="Bica Móvel">
+                <h3>Materiais</h3>
+                <p>Elétricas</p>
+            </a>
+            <a href="" class="Meu-card" id="card-5" data-aos="fade-down" data-aos-duration="2000">
+                <img src="/assets/imagens/icons/forros.png" alt="Torneira Jardim">
+                <h3>Forros</h3>
+                <p>de PVC</p>
+            </a>
+            <a href="" class="Meu-card" id="card-6" data-aos="fade-down" data-aos-duration="3000">
+                <img src="/assets/imagens/icons/plugue.png" alt="Registro de Pressão">
+                <h3>Plugue</h3>
+                <p>e conectores</p>
+            </a>
+        </div>
+    </section>
+    <section class="contato">
+  <div class="container">
+    <h1>SERVIÇOS DE ATENDIMENTO</h1>
+    <div class="contatos">
+      <div class="contato-item">
+        <div class="icone">
+          <img src="/assets/imagens/icons/Sac.png" alt="Sac">
+        </div>
+        <p>Sac</p>
+      </div>
+      <div class="contato-item">
+        <div class="icone">
+          <img src="/assets/imagens/icons/Assistencia-Tecnica.png" alt="Assistência Técnica">
+        </div>
+        <p>Assistência Técnica</p>
+      </div>
+      <div class="contato-item">
+        <div class="icone">
+          <img src="/assets/imagens/icons/Equipe-Comercial.png" alt="Equipe Comercial">
+        </div>
+        <p>Equipe Comercial</p>
+      </div>
     </div>
+  </div>
+</section>
     <footer class="footer-header">
         <div class="container">
             <div class="top">
@@ -138,10 +195,13 @@
             </div>
         </div>
     </footer>
-
-    <!-- SCRIPTS -->
-    <script src="/assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="/assets/js/script.js"></script>
 
 </html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/imagens/logo_64x64.ico" type="logo_icon">
+    <title>Forusi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html"><img src="/assets/imagens/logo-link.svg" alt="logo-link"
+                    class="logo-img"></a>
+            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mx-lg-2" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                SOBRE NÓS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" data-bs-auto-close="outside">
+                                <li><a class="dropdown-item" href="/pages/Trabalhe.html">TRABALHE CONOSCO</a></li>
+                                <li><a class="dropdown-item" href="#">FAC</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mx-lg-2" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                PRODUTOS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="/pages/Produtos.html?categoria=Metais Sanitários"
+                                        class="dropdown-item">Metais Sanitários</a></li>
+                                <li><a href="/pages/Produtos.html?categoria=Chuveiros e Torneiras Elétricas"
+                                        class="dropdown-item">Chuveiros e Torneiras Elétricas</a></li>
+                                <li><a href="/pages/Produtos.html?categoria=Pistolas para Pintura"
+                                        class="dropdown-item">Pistolas para Pintura</a></li>
+                                <li><a href="/pages/Produtos.html?categoria=Materiais Elétricos"
+                                        class="dropdown-item">Materiais Elétricos</a></li>
+                                <li><a href="/pages/Produtos.html?categoria=Forros de PVC" class="dropdown-item">Forros
+                                        de PVC</a></li>
+                                <li><a href="/pages/Produtos.html?categoria=Plugues e Conectores"
+                                        class="dropdown-item">Plugues e Conectores</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="/pages/Institucional.html">INSTITUCIONAL</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">CONTATOS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="faq">
+        <div class="container">
+            <h2 class="faq__title">Perguntas Frequentes</h2>
+            <ul class="faq__list">
+                <li class="faq__item">
+                    <button class="faq__question" data-faq-question>
+                        A FORUSI vende direto para consumidor final?
+                        <i class="bi bi-caret-down-fill faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Não. Nós atendemos a Lojistas, Home Centers e Construtoras em todo o país.</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__question" data-faq-question>
+                        Ainda há dúvidas sobre as Duchas Elétricas Forusi?
+                        <i class="bi bi-caret-down-fill faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Envie um whatsApp para nossa equipe clicando aqui, ou pelo número (11)994917516.</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__question" data-faq-question>
+                        Como faço para abrir o espalhador de um chuveiro elétrico?
+                        <i class="bi bi-caret-down-fill faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Utilizando apenas as mãos gire o espalhador no sentido anti-horário para abrir e sentido
+                            horário para fechar. Na remontagem do espalhador, verifique se o anel de vedação está na
+                            posição correta, observando também o posicionamento do fio terra (fio verde).</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__question" data-faq-question>
+                        Como faço para instalar os acessórios FORUSI?
+                        <i class="bi bi-caret-down-fill faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Os acessórios FORUSI são de fácil instalação basta seguir as instruções que constam na
+                            embalagem do produto.</p>
+                        <p>Não é necessário local exclusivo para instalação, o que facilita a
+                            adaptação do produto conforme o ambiente. Em caso de dúvidas, ligue para nossa central:</p>
+                        <ul>
+                            <li>(11)2523-9600 (São Paulo)</li>
+                            <li>(11) 0800 11 04 99 (demais localidades)</li>
+                        </ul>
+                        <p>Solicite o atendimento da Assistência Técnica.</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__question" data-faq-question>
+                        Como faço para trocar a resistência de um chuveiro elétrico FORUSI?
+                        <i class="bi bi-caret-down-fill faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Para proceder à troca da resistência, desligue a corrente elétrica através do disjuntor ou
+                            chave geral, evitando choques elétricos e riscos durante os procedimentos. As orientações
+                            para troca estão no manual que acompanha a resistência no ato da aquisição.</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__question" data-faq-question>
+                        Ainda há dúvidas sobre as Duchas Elétricas Forusi?
+                        <i class="bi bi-caret-down-fill faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Envie um whatsApp para nossa equipe clicando aqui, ou pelo número (11)994917516 </p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__question" data-faq-question>
+                        Como fazer o aterramento de um chuveiro?
+                        <i class="bi bi-caret-down-fill faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Para a sua segurança a instalação elétrica e o sistema de aterramento devem ser executados
+                            por pessoa qualificada. Para evitar riscos de choques elétricos, o fio terra (fio verde ou
+                            verde/amarelo) deve ser conectado a um sistema de aterramento, conforme a NBR-5410. O
+                            sistema de aterramento garante a segurança durante a utilização de aparelhos
+                            eletrodomésticos.</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__question" data-faq-question>
+                        Como funciona a Garantia de um chuveiro elétrico FORUSI?
+                        <i class="bi bi-caret-down-fill faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>A garantia se aplica a defeitos de fabricação, pelo período de um ano, incluindo a garantia
+                            legal, com exceção da queima de resistência e acessórios que tem o seu prazo estipulado pelo
+                            Código de Defesa do Consumidor/Garantia Legal. O prazo de garantia é contado a partir da
+                            data da venda do produto ao consumidor, comprovada pela primeira via da Nota Fiscal e
+                            apresentação desta observando os itens:</p>
+                        <ul>
+                            <li>Instalações e uso de acordo com as instruções que acompanham o aparelho, bem como das
+                                normas técnicas brasileiras vigentes;</li>
+                            <li>Não retire a tampa superior do produto, pois ela é parte da segurança do produto e
+                                perderá
+                                sua garantia se esta for rompida.</li>
+                            <li>As despesas de transporte para entrega e retirada dos aparelhos em garantia até os
+                                locais
+                                de Serviço Autorizado correrão por conta do proprietário.</li>
+                            <li>Aparelhos não deverão ter sofrido queda, instalação inadequada (produto em tensão
+                                elétrica
+                                diversa ao especificado nas instruções) ou violação.</li>
+                            <li>A assistência técnica decorrente da garantia só poderá ser prestada pelos Serviços
+                                autorizados pela Forusi. Consulte o SAC através dos telefones 0800-110-499 /
+                                (15)3266-1633
+                                ou no email sac.duchaseletrica@forusi.com.br </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__question" data-faq-question>
+                        É obrigatório o uso de filtro e válvula reguladora de ar para as pistolas?
+                        <i class="bi bi-caret-down-fill faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Sim, para melhor qualidade da Pintura e para regulagem de pressão de trabalho de cada
+                            pistola.</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__question" data-faq-question>
+                        Por que não posso instalar um chuveiro elétrico utilizando plugs e tomadas?
+                        <i class="bi bi-caret-down-fill faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Os plugs e tomadas de uso geral (TUG) não são preparados para resistir à corrente elétrica
+                            que circula pelos aparelhos domésticos de aquecimento da FORUSI, por serem estes
+                            equipamentos de alta potência elétrica. Seu uso compromete a segurança da instalação.</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__question" data-faq-question>
+                        Qual a diferença entre os modelos de pistolas para pintura?
+                        <i class="bi bi-caret-down-fill faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Existem Pistolas de Alta Produção, Baixa Produção e Média Produção, cada tipo de pistola tem
+                            um consumo de ar diferente e adequado para determinado compressor de ar: </p>
+                        <ul>
+                            <li>Pistola de Ar Direto: Pistola sem conjunto de regulagem de ar, sendo própria para
+                                compressores de ar direto.</li>
+                            <li>Pistola Gravitacional: Com caneca na parte superior, funciona por gravidade tendo
+                                aproveitamento de 100% do material utilizado.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__question" data-faq-question>
+                        Qual disjuntor e qual fiação são adequados para determinado produto?
+                        <i class="bi bi-caret-down-fill faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>O disjuntor e a fiação dependem de dois fatores, a tensão e a potência do produto. Segue tabela com especificações técnicas para os diferentes modelos de duchas e chuveiros FORUSI:</p>
+                        <div class="faq__table-wrapper">
+                            <table class="faq__table">
+                                <thead>
+                                    <tr>
+                                        <th>Tensão</th>
+                                        <th>Potência</th>
+                                        <th>Fiação (mm²)</th>
+                                        <th>Disjuntor (A)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>127V</td>
+                                        <td>1700W</td>
+                                        <td>10</td>
+                                        <td>50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>127V</td>
+                                        <td>3800W</td>
+                                        <td>10</td>
+                                        <td>50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>127V</td>
+                                        <td>4400W</td>
+                                        <td>6</td>
+                                        <td>40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>127V</td>
+                                        <td>5400W</td>
+                                        <td>10</td>
+                                        <td>50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>127V</td>
+                                        <td>5500W</td>
+                                        <td>10</td>
+                                        <td>50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>220V</td>
+                                        <td>1900W</td>
+                                        <td>4</td>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>220V</td>
+                                        <td>3900W</td>
+                                        <td>4</td>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>220V</td>
+                                        <td>4400W</td>
+                                        <td>4</td>
+                                        <td>25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>220V</td>
+                                        <td>5400W</td>
+                                        <td>4</td>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>220V</td>
+                                        <td>5800W</td>
+                                        <td>4</td>
+                                        <td>30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__question" data-faq-question>
+                        Qual é a pressão mínima para funcionamento dos chuveiros elétricos FORUSI?
+                        <i class="bi bi-caret-down-fill faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>A pressão para as duchas elétricas FORUSI funciona a partir de 1 m.c.a até 40 m.c.a.</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__question" data-faq-question>
+                        Qual o compressor indicado para trabalhar com a pistola de pintura FORUSI?
+                        <i class="bi bi-caret-down-fill faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Depende do consumo de ar da pistola utilizada, ex: Se a pistola tiver um consumo de ar de 2,5
+                            pcm (pés cúbicos por minuto) O compressor deverá produzir no mínimo 2,5 pcm</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__question" data-faq-question>
+                        Qual tempo de garantia a FORUSI dá aos seus metais sanitários?
+                        <i class="bi bi-caret-down-fill faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>A FORUSI dá 10 anos de garantia contra defeito de fabricação em toda a sua linha de metais
+                            sanitários (exceto para os mecanismos 2 anos). Importante: a garantia não se aplica em caso
+                            de mau uso, instalação incorreta ou utilização de produtos químicos na limpeza do produto.
+                            Para melhor orientação, leia atentamente o certificado de garantia que consta na embalagem
+                            do produto.</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <button class="faq__question" data-faq-question>
+                        Quando devo instalar o regulador/redutor de pressão dos chuveiros elétricos Forusi?
+                        <i class="bi bi-caret-down-fill faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Ele deve ser instalado sempre que a pressão for superior àquela determinada no manual de
+                            instalação. A pressão de uso varia de acordo com a distância de (m.c.a).</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <footer class="footer-header">
+        <div class="container">
+            <div class="top">
+                <div class="logo-details">
+                    <img src="/assets/imagens/logo-link.svg" class="logo-footer" alt="">
+                </div>
+                <div class="footer-span">
+                    <span>Forusi há 50 anos nos lares e comércios brasileiros, em 6 segmentos da construção civil
+                        com + de 1000 produtos!!!</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="link-boxes">
+                    <ul class="box">
+                        <li class="link_name">Produtos</li>
+                        <li><a href="/pages/Produtos.html?categoria=Metais Sanitários">Metais Sanitários</a></li>
+                        <li><a href="/pages/Produtos.html?categoria=Chuveiros e Torneiras Elétricas">Chuveiros e Torneiras Elétricas</a></li>
+                        <li><a href="/pages/Produtos.html?categoria=Pistolas para Pintura">Pistolas para Pintura</a></li>
+                        <li><a href="/pages/Produtos.html?categoria=Materiais Elétricos">Materiais Elétricos</a></li>
+                        <li><a href="/pages/Produtos.html?categoria=Forros de PVC">Forros de PVC</a></li>
+                        <li><a href="/pages/Produtos.html?categoria=Plugues e Conectores">Plugues e Conectores</a></li>
+                    </ul>
+                    <ul class="box">
+                        <li class="link_name">Fale com a Área Comercial</li>
+                        <li><a href="">De Metais Sanitários</a></li>
+                        <li><a href="">De Chuveiros e Torneiras Elétricas</a></li>
+                        <li><a href="">De Pistolas para Pintura</a></li>
+                        <li><a href="">De Materiais Elétricos</a></li>
+                        <li><a href="">De Forros de PVC</a></li>
+                        <li><a href="">De Plugues e Conectores</a></li>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li class="link_name">Onde fica a Forusi</li>
+                        <li><a href="">Itaquera</a></li>
+                        <li><a href="">Mogi-mirim</a></li>
+                        <li><a href="">Iperó </a></li>
+                    </ul>
+                    <ul class="box">
+                        <li class="link_name">Contatos</li>
+                        <li><a href="">(11) 2523-9600</a></li>
+                        <li><i class="bi bi-instagram"></i><a
+                                href="https://www.instagram.com/forusioficial/">@forusioficial</a></li>
+                        <li><i class="bi bi-linkedin"></i><a href="https://br.linkedin.com/company/forusi">linkedin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-details">
+            <div class="bottom_text">
+                <span class="copyright_text">Copyright © 2025 All rights reserved</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="/assets/js/script.js"></script>
+
+</html>

@@ -41,7 +41,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" data-bs-auto-close="outside">
                                 <li><a class="dropdown-item" href="/pages/Trabalhe.html">TRABALHE CONOSCO</a></li>
-                                <li><a class="dropdown-item" href="#">FAC</a></li>
+                                <li><a class="dropdown-item" href="/pages/Fac.html">FAC</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -68,7 +68,7 @@
                             <a class="nav-link mx-lg-2" href="/pages/Institucional.html">INSTITUCIONAL</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#">CONTATOS</a>
+                            <a class="nav-link mx-lg-2" href="/pages/Contato.html">CONTATOS</a>
                         </li>
                     </ul>
                     <div class="icons">
@@ -79,30 +79,32 @@
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="container-formulario">
         <div class="formulario">
-            <h1>Trabalhe conosco</h1>
-            <hr>
-            <P>A igualdade salarial é um dos pilares fundamentais da justiça social e econômica.</P>
+            <div class="formulario--header">
+                <h1>Trabalhe conosco</h1>
+                <hr>
+                <P>A igualdade salarial é um dos pilares fundamentais da justiça social e econômica.</P>
+            </div>
             <img src="/assets/imagens/GOV.png" alt="">
             <div class="formulario--container">
                 <div class="formulario-content">
-                <form action="enviar-curriculo.php" method="POST" enctype="multipart/form-data">
-                    <h2>Envie seu Currículo</h2>
-                    <label for="nome">Nome completo:</label><br>
-                    <input type="text" name="nome" id="nome" required><br><br>
-                    <label for="email">Email:</label><br>
-                    <input type="email" name="email" id="email" required><br><br>
-                    <label for="linkedin">Perfil do LinkedIn:</label><br>
-                    <input type="url" name="linkedin" id="linkedin"
-                        placeholder="https://www.linkedin.com/in/seu-perfil"><br><br>
-                    <label for="mensagem">Mensagem:</label><br>
-                    <textarea name="mensagem" id="mensagem" rows="4"></textarea><br><br>
-                    <label for="arquivo">Currículo (PDF ou DOC):</label><br>
-                    <input type="file" name="arquivo" id="arquivo" accept=".pdf,.doc,.docx" required><br><br>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
+                    <form action="enviar-curriculo.php" method="POST" enctype="multipart/form-data">
+                        <h2>Envie seu Currículo</h2>
+                        <label for="nome">Nome completo:</label><br>
+                        <input type="text" name="nome" id="nome" required><br><br>
+                        <label for="email">Email:</label><br>
+                        <input type="email" name="email" id="email" required><br><br>
+                        <label for="linkedin">Perfil do LinkedIn:</label><br>
+                        <input type="url" name="linkedin" id="linkedin"
+                            placeholder="https://www.linkedin.com/in/seu-perfil"><br><br>
+                        <label for="mensagem">Mensagem:</label><br>
+                        <textarea name="mensagem" id="mensagem" rows="4"></textarea><br><br>
+                        <label for="arquivo">Currículo (PDF ou DOC):</label><br>
+                        <input type="file" name="arquivo" id="arquivo" accept=".pdf,.doc,.docx" required><br><br>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -126,12 +128,12 @@
                 <div class="link-boxes">
                     <ul class="box">
                         <li class="link_name">Produtos</li>
-                        <li><a href="">Metais Sanitários</a></li>
-                        <li><a href="">Chuveiros e Torneiras Elétricas</a></li>
-                        <li><a href="">Pistolas para Pintura</a></li>
-                        <li><a href="">Materiais Elétricos</a></li>
-                        <li><a href="">Forros de PVC</a></li>
-                        <li><a href="">Plugues e Conectores</a></li>
+                        <li><a href="/pages/Produtos.html?categoria=Metais Sanitários">Metais Sanitários</a></li>
+                        <li><a href="/pages/Produtos.html?categoria=Chuveiros e Torneiras Elétricas">Chuveiros e Torneiras Elétricas</a></li>
+                        <li><a href="/pages/Produtos.html?categoria=Pistolas para Pintura">Pistolas para Pintura</a></li>
+                        <li><a href="/pages/Produtos.html?categoria=Materiais Elétricos">Materiais Elétricos</a></li>
+                        <li><a href="/pages/Produtos.html?categoria=Forros de PVC">Forros de PVC</a></li>
+                        <li><a href="/pages/Produtos.html?categoria=Plugues e Conectores">Plugues e Conectores</a></li>
                     </ul>
                     <ul class="box">
                         <li class="link_name">Fale com a Área Comercial</li>

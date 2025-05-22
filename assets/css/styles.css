@@ -120,7 +120,7 @@ a {
     padding: 20px;
     border-radius: 10px;
     color: #fff;
-    width: 60%;
+    width: 80%;
 }
 
 .formulario-content h2 {
@@ -142,7 +142,7 @@ a {
     justify-content: space-around;
 }
 
-.banner{
+.banner {
     max-width: 75%;
     margin: 0 auto;
     margin-top: 8%;
@@ -171,7 +171,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    gap: 10px; 
+    gap: 10px;
     padding: 10px;
     max-width: 1000px;
     margin: auto;
@@ -184,14 +184,15 @@ a {
     object-fit: cover;
 }
 
-.text h2, h1{
+.text h2,
+.title-text {
     color: #212243;
     font-size: 2.2rem;
     font-weight: bold;
     text-align: center;
 }
 
-.content--text{
+.content--text {
     margin-top: 170px;
 }
 
@@ -204,11 +205,15 @@ a {
 
 .bloco-com-fundo {
     background-image: url('/assets/imagens/fabricas/bg-ins.jpg');
-    background-size: cover;       /* cobre todo o fundo */
-    background-position: center;  /* centraliza a imagem */
-    background-repeat: no-repeat; /* evita repetição */
+    background-size: cover;
+    /* cobre todo o fundo */
+    background-position: center;
+    /* centraliza a imagem */
+    background-repeat: no-repeat;
+    /* evita repetição */
     padding: 40px;
-    color: white;                 /* para texto ficar visível em fundo escuro */
+    color: white;
+    /* para texto ficar visível em fundo escuro */
     font-size: 1.2rem;
     position: relative;
     z-index: 1;
@@ -413,14 +418,256 @@ a {
 }
 
 
-@media (max-width: 768px) { 
-    .text{
+.cads-categorias {
+    margin-top: 115px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.contato {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contato h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contatos {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.contato-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
+
+.icone {
+    background-color: #1f2341;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icone img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.contato-item p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.categorias {
+    padding: 40px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.container-categorias {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.categoria-card {
+    background-color: #212243;
+    padding: 20px;
+    width: 180px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.categoria-card img {
+    max-width: 80px;
+    margin-bottom: 15px;
+}
+
+.categoria-card h3 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.categoria-card button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 14px;
+    padding: 5px 15px;
+    border: 1px solid #000;
+    background-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.categoria-card button:hover {
+    background-color: #05a4cb;
+    color: #fff;
+    border-color: #05a4cb;
+}
+
+.categoria-card button img {
+    width: 14px;
+    height: 14px;
+}
+
+.faq {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    font-family: "Inter", sans-serif;
+}
+
+.container-formulario h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.container-formulario {
+    max-width: 800px;
+    margin: auto;
+}
+
+.faq__title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #333;
+}
+
+.faq__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.faq__question {
+    width: 100%;
+    background: none;
+    border: 1px solid #09809e;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    cursor: pointer;
+    color: #212243;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.faq__icon {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.faq__answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 10px;
+    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+}
+
+.faq__item i {
+    color: #212243;
+}
+
+.faq__item--is-open .faq__answer {
+    min-height: 60px;
+}
+
+.faq__item--is-open .faq__answer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+.faq__item--is-open .faq__icon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.faq__answer p,
+.faq__answer ul {
+    margin: 0;
+    padding: 10px 0;
+    color: #09809e;
+}
+
+
+.faq__answer ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.faq__answer li {
+    margin-bottom: 5px;
+}
+
+.faq__table-wrapper {
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.faq__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.faq__table thead {
+    background-color: #05a4cb;
+    color: white;
+}
+
+.faq__table th,
+.faq__table td {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.faq__table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+@media (max-width: 768px) {
+
+    .text {
         margin-bottom: 50px;
     }
 
-    .bloco-com-fundo{
+    .bloco-com-fundo {
         padding: 1px;
     }
+
     .navbar {
         max-width: 415px;
         background-color: #05a4cb;
@@ -569,17 +816,38 @@ a {
 }
 
 @media (max-width: 768px) {
-  .banner {
-    max-width: 100%;
-    margin-top: 20px;
-  }
+    .banner {
+        max-width: 100%;
+        margin-top: 20px;
+    }
 
-  .banner img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
+    .banner img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .formulario input,
+    .formulario textarea {
+        width: 95%;
+    }
+
+    .formulario-content {
+        width: 90%;
+    }
+
+    .fabricas {
+        display: block;
+        padding: 10px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .fabricas img {
+        padding: 10px;
+    }
 }
+
 .Sobre {
     background-color: #212243;
 }
