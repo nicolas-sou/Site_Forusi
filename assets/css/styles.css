@@ -7,7 +7,7 @@ a {
 }
 
 .navbar {
-    background-image: linear-gradient(0deg, #212243, #05a4cb);
+    background-color: #05a4cb;
     height: 100px;
     margin: 15px;
     border-radius: 10px;
@@ -965,7 +965,6 @@ a {
 }
 
 .card-body {
-    background-color: #212243;
     height: 90px;
     display: flex;
     flex-direction: column;
@@ -981,7 +980,7 @@ a {
 .card-title {
     font-size: 1.1rem;
     font-weight: bold;
-    color: #ffffff;
+    color: #212243;
     min-height: 3em;
     display: flex;
     align-items: center;
@@ -1051,6 +1050,7 @@ a {
     object-fit: contain;
     height: 180px;
     padding: 10px;
+    background-color: #F2F2F2;
 }
 
 .card.h-100 {
