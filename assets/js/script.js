@@ -66,9 +66,10 @@ function filtrarPorPesquisa(termo) {
         : todosProdutos;
 
     resultadoBusca = base.filter(produto =>
-        produto.nome.toLowerCase().includes(termo.toLowerCase()) ||
-        (produto.descricao && produto.descricao.toLowerCase().includes(termo.toLowerCase()))
-    );
+    produto.nome.toLowerCase().includes(termo.toLowerCase()) ||
+    (produto.descricao && produto.descricao.toLowerCase().includes(termo.toLowerCase())) ||
+    (produto.Cod && produto.Cod.toString().toLowerCase().includes(termo.toLowerCase()))
+);
 
     paginaProdutos = 0;
     document.getElementById('produtos-lista').innerHTML = '';
@@ -97,7 +98,7 @@ const bannersPorCategoria = {
         mobile: "/assets/imagens/mobile/forros.svg"
     },
     "Plugues e Conectores": {
-        desktop: "/assets/imagens/banner/Banner_fios.svg",
+        desktop: "/assets/imagens/banner/Banner_plugues.svg",
         mobile: "/assets/imagens/mobile/plugues.svg"
     }
 };
@@ -162,7 +163,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         mostrarMaisProdutosFiltrados(resultadoBusca);
     }
 
-    // Produtos por categoria
     document.querySelectorAll('.filtro-categoria').forEach(link => {
         link.addEventListener('click', async e => {
             e.preventDefault();
@@ -171,7 +171,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     });
 
-    // Produtos da página de produtos
     const btnMais = document.getElementById("btn-ver-mais");
     if (btnMais && document.getElementById('produtos-lista')) {
         btnMais.addEventListener("click", () => {
@@ -179,7 +178,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    // Pesquisa
     const inputPesquisa = document.getElementById("input-pesquisa");
     if (inputPesquisa) {
         inputPesquisa.addEventListener("input", (e) => {
@@ -188,7 +186,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    // Produtos na página inicial (lancamentos)
     const containerLancamentos = document.querySelector('.lancamentos .row.mb-4');
     const botaoLancamentos = document.getElementById('btn-ver-mais');
 
@@ -241,3 +238,41 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (categoriaSelecionada) atualizarBanner(categoriaSelecionada);
     });
 });
+
+// ✅ Descrição do produto: página Descricao.html
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+if (id && document.getElementById("detalhes-produto")) {
+    fetch('https://forusi-api.vercel.app/api/produtos')
+        .then(res => res.json())
+        .then(produtos => {
+            const produto = produtos.find(p => p.id == id);
+            const container = document.getElementById("detalhes-produto");
+
+            if (!produto) {
+                container.innerHTML = "<p class='text-danger'>Produto não encontrado.</p>";
+                return;
+            }
+
+            container.innerHTML = `
+                <div class="row produto-detalhe">
+                    <div class="col-md-5">
+                        <div class="imagem-produto">
+                            <img src="${produto.imagem}" class="img-fluid" alt="${produto.nome}">
+                        </div>
+                    </div>
+                    <div class="col-md-7 detalhes-produto">
+                        <h1 class="nome-produto">${produto.nome}</h1>
+                        <p class="codigo-produto"><strong>Código:</strong> ${produto.Cod}</p>
+                        <p class="descricao-produto">${produto.descricao || "Sem descrição disponível."}</p>
+                    </div>
+                </div>
+            `;
+        })
+        .catch(error => {
+            const container = document.getElementById("detalhes-produto");
+            container.innerHTML = "<p class='text-danger'>Erro ao carregar o produto.</p>";
+            console.error(error);
+        });
+}
