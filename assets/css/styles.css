@@ -189,10 +189,22 @@ a {
     object-fit: cover;
 }
 
+.text p{
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.text ul li {
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
 .text h2,
 .title-text {
-    color: #fff;
-    font-size: 2.2rem;
+    color: #212243;
+    font-size: 3rem;
     font-weight: bold;
     text-align: center;
 }
@@ -859,13 +871,13 @@ a {
         margin: auto;
     }
 
-    .fabricas img {
-        padding: 10px;
-    }
-
     .formulario--header{
         padding: 10px;
     }
+}
+
+.fabrica{
+    margin: 20px
 }
 
 .Sobre {
@@ -882,6 +894,9 @@ a {
     margin-left: 70px;
     color: #fff;
     font-weight: bold;
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 1rem;
 }
 
 .img-sobre {
