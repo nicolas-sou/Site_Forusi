@@ -98,7 +98,7 @@ const bannersPorCategoria = {
         mobile: "/assets/imagens/mobile/forros.svg"
     },
     "Plugues e Conectores": {
-        desktop: "/assets/imagens/banner/Banner_plugues.svg",
+        desktop: "/assets/imagens/banner/Banner_fios.svg",
         mobile: "/assets/imagens/mobile/plugues.svg"
     }
 };
