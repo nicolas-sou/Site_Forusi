@@ -572,7 +572,6 @@ a {
 .faq__question {
     width: 100%;
     background: none;
-    border: 1px solid #09809e;
     font-size: 18px;
     font-weight: 600;
     text-align: left;
@@ -583,7 +582,7 @@ a {
     cursor: pointer;
     color: #212243;
     padding: 10px;
-    border-radius: 10px;
+    border: none;
 }
 
 .faq__icon {
@@ -970,6 +969,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #F2F2F2;
 }
 
 .Container-produtos {
@@ -1050,7 +1050,6 @@ a {
     object-fit: contain;
     height: 180px;
     padding: 10px;
-    background-color: #F2F2F2;
 }
 
 .card.h-100 {
@@ -1064,13 +1063,46 @@ a {
     transform: scale(1.05);
 }
 
-.produto {
-    margin-top: 150px;
+.produto-detalhe {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
 }
 
-.card-produto img {
-    border: 1px solid #09809e;
+.imagem-produto img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
     border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+
+.detalhes-produto {
+    padding: 20px;
+}
+
+.nome-produto {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.codigo-produto,
+.descricao-produto {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.produto {
+    margin-top: 150px;
 }
 
 #detalhes-produto {
@@ -1211,6 +1243,21 @@ footer .bottom-details .bottom_text {
 .bottom-details .bottom_text a {
     margin-right: 10px;
     text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .produto-detalhe {
+        text-align: center;
+    }
+    .nome-produto {
+        font-size: 22px;
+    }
+    .preco-principal {
+        font-size: 26px;
+    }
+    .btn-comprar {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
