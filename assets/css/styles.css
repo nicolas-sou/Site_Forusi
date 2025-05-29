@@ -1335,6 +1335,13 @@ footer .bottom-details .bottom_text {
 }
 
 @media (max-width: 767px) {
+
+    .card-contato{
+        max-width: 346px;
+    }
+    .icone-contato img{
+                max-width: 132%;
+    }
     .produto-detalhe {
         text-align: center;
     }
