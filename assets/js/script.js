@@ -7,6 +7,9 @@ let categoriaSelecionada = null;
 async function carregarProdutos() {
     const res = await fetch("https://forusi-api.vercel.app/api/produtos");
     todosProdutos = await res.json();
+    todosProdutos.sort((a, b) => {
+        return (b.lancamento === true) - (a.lancamento === true);
+    });
     resultadoBusca = todosProdutos;
 }
 
@@ -19,14 +22,15 @@ function mostrarProdutos(lista, append = false) {
         const card = document.createElement('div');
         card.className = 'col-md-4 mb-4';
         card.innerHTML = `
-            <div class="card h-100 text-center">
-                <a href="/pages/Descricao.html?id=${produto.id}" class="text-decoration-none text-dark">
-                    <img src="${produto.imagem}" class="card-img-top p-3" alt="${produto.nome}">
-                    <div class="card-body">
-                        <h6 class="card-title">${produto.nome}</h6>
-                    </div>
-                </a>
+            <div class="card h-100 text-center position-relative">
+        ${produto.lancamento ? '<span class="selo-lancamento">Lançamento</span>' : ''}
+        <a href="/pages/Descricao.html?id=${produto.id}" class="text-decoration-none text-dark">
+            <img src="${produto.imagem}" class="card-img-top p-3" alt="${produto.nome}">
+            <div class="card-body">
+                <h6 class="card-title">${produto.nome}</h6>
             </div>
+        </a>
+    </div>
         `;
         container.appendChild(card);
     });
@@ -65,11 +69,13 @@ function filtrarPorPesquisa(termo) {
         ? todosProdutos.filter(p => p.categoria === categoriaSelecionada)
         : todosProdutos;
 
-    resultadoBusca = base.filter(produto =>
-    produto.nome.toLowerCase().includes(termo.toLowerCase()) ||
-    (produto.descricao && produto.descricao.toLowerCase().includes(termo.toLowerCase())) ||
-    (produto.Cod && produto.Cod.toString().toLowerCase().includes(termo.toLowerCase()))
-);
+    resultadoBusca = base
+        .filter(produto =>
+            produto.nome.toLowerCase().includes(termo.toLowerCase()) ||
+            (produto.descricao && produto.descricao.toLowerCase().includes(termo.toLowerCase())) ||
+            (produto.Cod && produto.Cod.toString().toLowerCase().includes(termo.toLowerCase()))
+        )
+        .sort((a, b) => (b.lancamento === true) - (a.lancamento === true));
 
     paginaProdutos = 0;
     document.getElementById('produtos-lista').innerHTML = '';
@@ -186,13 +192,13 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    const containerLancamentos = document.querySelector('.lancamentos .row.mb-4');
+    const containerLancamentos = document.getElementById('lancamentos-home');
     const botaoLancamentos = document.getElementById('btn-ver-mais');
 
     if (containerLancamentos && !document.getElementById('produtos-lista')) {
         let pagina = 0;
         const porPagina = 6;
-        const produtosHome = todosProdutos;
+        const produtosHome = todosProdutos.filter(p => p.lancamento === true);
 
         function mostrarMaisProdutosHome() {
             const inicio = pagina * porPagina;
@@ -205,14 +211,15 @@ document.addEventListener("DOMContentLoaded", async () => {
                 card.setAttribute('data-aos', 'zoom-in');
                 card.setAttribute('data-aos-duration', '1000');
                 card.innerHTML = `
-                    <a href="/pages/Descricao.html?id=${produto.id}" class="text-decoration-none text-dark">
-                        <div class="card h-100">
-                            <img src="${produto.imagem}" class="card-img-top" alt="${produto.nome}">
-                            <div class="card-body">
-                                <h5 class="card-title">${produto.nome}</h5>
-                            </div>
-                        </div>
-                    </a>
+                    <div class="card h-100 text-center position-relative" data-aos="zoom-in" data-aos-duration="1000">
+        <span class="selo-lancamento">Lançamento</span>
+        <a href="/pages/Descricao.html?id=${produto.id}" class="text-decoration-none text-dark">
+            <img src="${produto.imagem}" class="card-img-top p-3" alt="${produto.nome}">
+            <div class="card-body">
+                <h6 class="card-title">${produto.nome}</h6>
+            </div>
+        </a>
+    </div>
                 `;
                 containerLancamentos.appendChild(card);
             });
