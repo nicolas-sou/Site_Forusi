@@ -189,7 +189,7 @@ a {
     object-fit: cover;
 }
 
-.text p{
+.text p {
     text-align: justify;
     line-height: 1.6;
     margin-top: 1rem;
@@ -871,12 +871,12 @@ a {
         margin: auto;
     }
 
-    .formulario--header{
+    .formulario--header {
         padding: 10px;
     }
 }
 
-.fabrica{
+.fabrica {
     margin: 20px
 }
 
@@ -1042,61 +1042,76 @@ a {
     transition: transform 0.3s ease;
 }
 
+.contato-especial h2 {
+    color: #212243;
+}
+
+.contato-especial {
+    margin-top: 180px;
+}
+
+.Cars-contatos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
 .card-contato {
-  background-color: #05a4cb;
-  color: #ffffff;
-  border-radius: 16px;
-  display: flex;
-  padding: 1.5rem;
-  gap: 1.5rem;
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+    background-color: #05a4cb;
+    color: #ffffff;
+    border-radius: 16px;
+    display: flex;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    max-width: 550px;
+    margin: 0 auto 2rem auto;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
 .card-contato:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .icone-contato {
-  padding: 1rem;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    padding: 1rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 45%;
 }
 
-.icone-contato  img{
+.icone-contato img {
     max-width: 50%;
     height: 100%;
     object-fit: cover;
 }
 
 .conteudo-contato h4 {
-  margin-bottom: 0.5rem;
-  font-size: 1.3rem;
-  font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 
 .conteudo-contato p {
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
-  color: #d6e8f0;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #d6e8f0;
 }
 
 .btn-contato {
-  background-color: #212243;
-  color: #fff;
-  padding: 0.5rem 1.2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s;
+    background-color: #212243;
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
 }
 
 .btn-contato:hover {
-  background-color: #0392b4;
+    background-color: #0392b4;
 }
 
 
@@ -1153,7 +1168,7 @@ a {
     display: block;
     margin: 0 auto;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -1323,12 +1338,15 @@ footer .bottom-details .bottom_text {
     .produto-detalhe {
         text-align: center;
     }
+
     .nome-produto {
         font-size: 22px;
     }
+
     .preco-principal {
         font-size: 26px;
     }
+
     .btn-comprar {
         width: 100%;
     }

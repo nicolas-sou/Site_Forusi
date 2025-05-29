@@ -265,7 +265,6 @@ if (id && document.getElementById("detalhes-produto")) {
                     <div class="col-md-7 detalhes-produto">
                         <h1 class="nome-produto">${produto.nome}</h1>
                         <p class="codigo-produto"><strong>Código:</strong> ${produto.Cod}</p>
-                        <p class="descricao-produto">${produto.descricao || "Sem descrição disponível."}</p>
                     </div>
                 </div>
             `;
